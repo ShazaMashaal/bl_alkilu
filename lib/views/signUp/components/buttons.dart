@@ -1,5 +1,6 @@
 import 'package:bl_alkilu/constants/colors.dart';
 import 'package:bl_alkilu/constants/dimenssion.dart';
+import 'package:bl_alkilu/views/navBar/view.dart';
 import 'package:bl_alkilu/views/signIn/view.dart';
 import 'package:bl_alkilu/widgets/custom_button.dart';
 import 'package:bl_alkilu/widgets/custom_text_button.dart';
@@ -16,9 +17,9 @@ class Buttons extends StatelessWidget {
         const SizedBox(height: 25,),
         SizedBox(
             width: sizeFromWidth(1.5),
-            child: const CustomButton(text: "Sign Up",fontSize: 14,verticalPadding: 10,buttonColor: mintGreenColor,shadowColor: mintGreenColor,)),
+            child:  CustomButton(text: "Sign Up",fontSize: 14,verticalPadding: 10,buttonColor: mintGreenColor,shadowColor: mintGreenColor,onPress: ()=>Get.off(()=>const NavBarView()))),
         const SizedBox(height: 10,),
-        CustomTextButton(text: "Already have an account?",alignment: Alignment.center,onPressed: ()=>Get.off(()=>const SignInView()),),
+        CustomTextButton(text: "Already have an account?",alignment: Alignment.center,onPressed: ()=>Get.offAll(()=>const SignInView()),),
       ],
     );
   }

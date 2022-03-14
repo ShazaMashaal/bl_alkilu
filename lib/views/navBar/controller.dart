@@ -1,4 +1,5 @@
 import 'package:bl_alkilu/constants/colors.dart';
+import 'package:bl_alkilu/views/navBar/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,7 +11,7 @@ class NavBarController extends GetxController {
     update();
   }
 
-  Color isCurrentIndex(int index){
+   isCurrentIndex(int index) {
     return tabIndex==index?mintGreenColor:Colors.white;
   }
 }

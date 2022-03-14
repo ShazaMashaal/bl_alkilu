@@ -17,7 +17,7 @@ class Sport extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Cairo',
       ),
-      home:  NavBarView(),
+      home:  const NavBarView(),
     );
   }
 }
