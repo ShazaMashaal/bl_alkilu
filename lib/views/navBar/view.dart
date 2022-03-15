@@ -1,3 +1,4 @@
+import 'package:bl_alkilu/views/cart/view.dart';
 import 'package:bl_alkilu/views/home/view.dart';
 import 'package:bl_alkilu/views/navBar/components/custom_bottom_nav_bar.dart';
 import 'package:bl_alkilu/views/navBar/controller.dart';
@@ -17,7 +18,7 @@ class NavBarView extends GetView<NavBarController> {
                   index: controller.tabIndex,
                   children: const [
                     HomeView(),
-                    HomeView(),
+                    CartView(),
                     HomeView(),
                     HomeView(),
                   ],

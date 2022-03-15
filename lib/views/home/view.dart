@@ -4,6 +4,7 @@ import 'package:bl_alkilu/constants/colors.dart';
 import 'package:bl_alkilu/views/home/components/categories.dart';
 import 'package:bl_alkilu/views/home/components/home_bar.dart';
 import 'package:bl_alkilu/widgets/custom_text.dart';
+import 'package:bl_alkilu/widgets/page_title.dart';
 import 'package:bl_alkilu/widgets/white_scaffold.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +16,7 @@ class HomeView extends StatelessWidget {
     return const WhiteScaffold(
       children: [
         HomeBar(),
-        CustomText(
-          text: "Products",
-          fontSize: 18,
-          verticalMargin: 10,
-          fontWeight: FontWeight.bold,
-          alignment: Alignment.centerLeft,
-        ),
+        PageTitle(title: "Products",),
         Categories()
       ],
     );

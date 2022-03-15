@@ -1,6 +1,6 @@
+import 'package:bl_alkilu/views/categoryProducts/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 
-import 'widgets/product_card.dart';
 
 class Products extends StatelessWidget {
   const Products({Key? key}) : super(key: key);
@@ -18,7 +18,12 @@ class Products extends StatelessWidget {
         crossAxisSpacing: 40,
         childAspectRatio: 1/1.5
       ),
-      itemBuilder: (BuildContext context,int index)=>const ProductCard(),
+      itemBuilder: (BuildContext context,int index)=> ProductCard(
+        price: "50",
+        image: "https://previews.123rf.com/images/diamant24/diamant241303/diamant24130300081/18456654-fried-fish-on-white-plate-with-knife-and-fork-closeup.jpg",
+        name: "Tilapia fish",
+        onTap: ()=>print("added"),
+      ),
     );
   }
 }

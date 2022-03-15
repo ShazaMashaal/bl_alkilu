@@ -1,3 +1,4 @@
+import 'package:bl_alkilu/constants/decorations.dart';
 import 'package:bl_alkilu/constants/raduis.dart';
 import 'package:bl_alkilu/constants/shadows.dart';
 import 'package:bl_alkilu/views/categoryProducts/view.dart';
@@ -16,11 +17,7 @@ class CategoryCard extends StatelessWidget {
     return GestureDetector(
       onTap: ()=>Get.to(()=>const CategoryProductsView()),
       child: Container(
-        decoration: const BoxDecoration(
-          borderRadius: categoryCardRadius,
-            color: Colors.white,
-            boxShadow: categoryShadow,
-        ),
+        decoration: itemDecoration,
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
