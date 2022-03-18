@@ -8,6 +8,8 @@ class CustomButton extends StatelessWidget {
 
   final Color? shadowColor;
 
+  final double? horizontalPadding;
+
   const CustomButton({
     Key? key,
     this.text = '',
@@ -17,7 +19,7 @@ class CustomButton extends StatelessWidget {
     this.radius = 26,
     this.buttonColor,
     this.borderColor,
-    this.verticalPadding=7, this.shadowColor=Colors.transparent,
+    this.verticalPadding=7, this.shadowColor=Colors.transparent, this.horizontalPadding=15,
   }) : super(key: key);
 
   final String text;
@@ -52,18 +54,20 @@ class CustomButton extends StatelessWidget {
                     Colors.black,
                   ]),
       ),
-      padding:  EdgeInsets.symmetric(horizontal: 15, vertical: verticalPadding),
+      padding:  EdgeInsets.symmetric(horizontal: horizontalPadding!, vertical: verticalPadding),
       child: InkWell(
         onTap: onPress,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CustomText(
-              text: text,
-              fontSize: fontSize,
-              color: fontColor,
-              fontWeight: FontWeight.normal,
-              alignment: Alignment.center,
+            Expanded(
+              child: CustomText(
+                text: text,
+                fontSize: fontSize,
+                color: fontColor,
+                fontWeight: FontWeight.normal,
+                alignment: Alignment.center,
+              ),
             ),
           ],
         ),
