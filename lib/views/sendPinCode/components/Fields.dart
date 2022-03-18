@@ -7,7 +7,7 @@ class Fields extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Form(child:
-      InputFormField(hint: "Email",icon: Icons.email,),
+      InputFormField(hint: "Email",icon: Icons.email,enabledBorderColor: Colors.white,),
     );
   }
 }

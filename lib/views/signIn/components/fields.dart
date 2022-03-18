@@ -12,9 +12,9 @@ class Fields extends StatelessWidget {
         SizedBox(
           height: 60,
         ),
-        InputFormField(hint: "Email",icon: Icons.email,),
+        InputFormField(hint: "Email",icon: Icons.email,enabledBorderColor: Colors.white,),
         SizedBox(height: 23,),
-        InputFormField(hint: "Password",icon: Icons.lock,secure: true,),
+        InputFormField(hint: "Password",icon: Icons.lock,secure: true,enabledBorderColor: Colors.white,),
         SizedBox(height: 7,),
 
       ],

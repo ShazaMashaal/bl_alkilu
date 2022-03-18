@@ -1,3 +1,4 @@
+import 'package:bl_alkilu/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -29,6 +30,8 @@ class InputFormField extends StatefulWidget {
   final bool? isRequired;
   final double radius;
   final Color? iconColor;
+  final Color? enabledBorderColor;
+
 
   const InputFormField({
     Key? key,
@@ -56,7 +59,7 @@ class InputFormField extends StatefulWidget {
     this.fillColor,
     this.textColor=Colors.white,
     this.labelColor,
-    this.isRequired, this.radius=25, this.iconColor=Colors.white,
+    this.isRequired, this.radius=25, this.iconColor=Colors.white, this.enabledBorderColor=appPurpleColor,
   }) : super(key: key);
 
   @override
@@ -66,6 +69,7 @@ class InputFormField extends StatefulWidget {
 class _InputFormFieldState extends State<InputFormField> {
 
   late bool _showPassword;
+
 
 
   @override
@@ -96,6 +100,7 @@ class _InputFormFieldState extends State<InputFormField> {
                 ),
               ),
             TextFormField(
+              
               controller: widget.controller,
               obscureText: _showPassword,
               onSaved: widget.onSave,
@@ -120,10 +125,11 @@ class _InputFormFieldState extends State<InputFormField> {
                       required isFocused,
                       maxLength}) =>
                   null,
-              style: TextStyle(color: widget.textColor),
+              style: TextStyle(color: widget.textColor,fontSize: 16),
               decoration: InputDecoration(
+                fillColor: widget.fillColor,
                   filled: true,
-                  hintStyle: TextStyle(color: widget.hintColor, fontSize: 12),
+                  hintStyle: TextStyle(color: widget.hintColor, fontSize: 16),
                   labelStyle: TextStyle(color: widget.labelColor),
                   counterStyle:
                       const TextStyle(fontSize: 0, color: Colors.transparent),
@@ -157,7 +163,7 @@ class _InputFormFieldState extends State<InputFormField> {
                       horizontal: 15, vertical: widget.maxLines == 1 ? 10 : 15),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: borderRadius,
-                    borderSide: const BorderSide(color: Colors.white),
+                    borderSide:  BorderSide(color: widget.enabledBorderColor!),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: borderRadius,

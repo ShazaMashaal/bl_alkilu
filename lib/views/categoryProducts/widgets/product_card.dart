@@ -39,11 +39,14 @@ class ProductCard extends StatelessWidget {
                 )
               ],
             ),
-            ProductPrice(
-              fontSize: 12,
-              radius: radius,
-              top: constraints.maxHeight / 2 - radius / 2,
-              price: price,
+            Positioned(
+              right: 0,
+              top: constraints.maxHeight / 2 - radius ,
+              child: ProductPrice(
+                fontSize: 12,
+                radius: radius,
+                price: price,
+              ),
             ),
           ],
         ),

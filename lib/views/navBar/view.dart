@@ -2,6 +2,7 @@ import 'package:bl_alkilu/views/cart/view.dart';
 import 'package:bl_alkilu/views/home/view.dart';
 import 'package:bl_alkilu/views/navBar/components/custom_bottom_nav_bar.dart';
 import 'package:bl_alkilu/views/navBar/controller.dart';
+import 'package:bl_alkilu/views/orderStatus/view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +20,7 @@ class NavBarView extends GetView<NavBarController> {
                   children: const [
                     HomeView(),
                     CartView(),
-                    HomeView(),
+                    OrderStatusView(),
                     HomeView(),
                   ],
                 ),

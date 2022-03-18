@@ -13,11 +13,11 @@ class Fields extends StatelessWidget {
           runSpacing: 15,
           children: const [
 
-            InputFormField(hint: "Email",icon: Icons.email,),
-            InputFormField(hint: "Password",icon: Icons.lock,secure: true,),
-            InputFormField(hint: "Confirm Password",icon: Icons.lock,secure: true,),
-            InputFormField(hint: "Address",icon: Icons.location_on),
-            InputFormField(hint: "Phone Number",icon: Icons.phone),
+            InputFormField(hint: "Email",icon: Icons.email,enabledBorderColor: Colors.white,),
+            InputFormField(hint: "Password",icon: Icons.lock,secure: true,enabledBorderColor: Colors.white,),
+            InputFormField(hint: "Confirm Password",icon: Icons.lock,secure: true,enabledBorderColor: Colors.white,),
+            InputFormField(hint: "Address",icon: Icons.location_on,enabledBorderColor: Colors.white,),
+            InputFormField(hint: "Phone Number",icon: Icons.phone,enabledBorderColor: Colors.white,isNumber: true,),
           ],
         ),
       ],
