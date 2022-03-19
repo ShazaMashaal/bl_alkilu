@@ -14,7 +14,7 @@ class CategoryProductsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return WhiteScaffold(
       hasAppBar: true,
-      appBar: categoryProductAppBar(name: "Fish"),
+      appBar: categoryProductAppBar(name: "Fish",context: context),
       hasNavBAr: true,
       children: const [
         Products()

@@ -10,6 +10,8 @@ class Orders extends StatelessWidget {
         itemCount: 5,
         shrinkWrap: true,
         physics: const BouncingScrollPhysics(),
-        itemBuilder: (context, index) => OrderCard());
+        itemBuilder: (context, index) => OrderCard(
+          imagePath: "https://upload.wikimedia.org/wikipedia/en/3/37/Meeza_Egyptian_company_logo.png",
+        ));
   }
 }

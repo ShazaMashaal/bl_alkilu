@@ -7,7 +7,9 @@ import 'package:bl_alkilu/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class OrderCard extends StatelessWidget {
-  const OrderCard({Key? key}) : super(key: key);
+  final String? imagePath;
+
+  const OrderCard({Key? key, this.imagePath}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class OrderCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment. stretch,
           children: [
-            Expanded(flex:1,child: Image.network("https://upload.wikimedia.org/wikipedia/en/3/37/Meeza_Egyptian_company_logo.png",)),
+            Expanded(flex:1,child: Image.network(imagePath!)),
             Expanded(flex:3,child: Container(
               padding: const EdgeInsets.fromLTRB(10, 15, 15, 10),
               child: Row(
